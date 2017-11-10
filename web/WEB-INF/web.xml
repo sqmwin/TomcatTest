@@ -3,4 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!--先配置Servlet信息-->
+    <servlet>
+        <!--配置Servlet名称,名称必须唯一-->
+        <servlet-name>MyServlet</servlet-name>
+        <!--配置Servlet完全路径(包名+类名)-->
+        <servlet-class>myServlet.MyServlet</servlet-class>
+    </servlet>
+
+    <!--配置Servlet映射(访问路径)-->
+    <servlet-mapping>
+        <!--和上面的Servlet中的名称一样-->
+        <servlet-name>MyServlet</servlet-name>
+        <!--配置虚拟路径(访问路径)-->
+        <url-pattern>/myservlet</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
